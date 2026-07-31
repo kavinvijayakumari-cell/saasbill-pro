@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+
+}
+
+
+
+body{
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1e3a8a
+    );
+
+
+    overflow-x:hidden;
+
+
+}
+
+
+
+/* ==========================
+   Main Layout
+========================== */
+
+
+.app{
+
+
+    display:flex;
+
+    min-height:100vh;
+
+
+}
+
+
+
+
+/* ==========================
+   Main Content
+========================== */
+
+
+.main-content{
+
+
+    margin-left:260px;
+
+
+    flex:1;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    min-height:100vh;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #f8fafc,
+    #eef2ff
+    );
+
+
+}
+
+
+
+
+
+/* ==========================
+   Top Bar
+========================== */
+
+
+.topbar{
+
+
+    height:80px;
+
+
+    background:
+
+    rgba(255,255,255,.85);
+
+
+    backdrop-filter:blur(15px);
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    padding:0 35px;
+
+
+    border-bottom:
+
+    1px solid rgba(148,163,184,.25);
+
+
+    position:sticky;
+
+
+    top:0;
+
+
+    z-index:100;
+
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+
+.topbar-left h2{
+
+
+    color:#0f172a;
+
+
+    font-size:28px;
+
+
+    font-weight:700;
+
+
+    letter-spacing:.5px;
+
+
+}
+
+
+
+
+/* ==========================
+   Right Section
+========================== */
+
+
+.topbar-right{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:22px;
+
+
+}
+
+
+
+
+
+/* Search */
+
+
+.search-box{
+
+
+    width:280px;
+
+
+    height:45px;
+
+
+    padding:0 18px;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    border-radius:15px;
+
+
+    background:#f1f5f9;
+
+
+    color:#0f172a;
+
+
+    font-size:15px;
+
+
+    transition:.3s;
+
+
+    box-shadow:
+
+    inset 0 0 0 1px #e2e8f0;
+
+
+}
+
+
+
+.search-box::placeholder{
+
+
+    color:#64748b;
+
+
+}
+
+
+
+
+.search-box:focus{
+
+
+    background:white;
+
+
+    box-shadow:
+
+    0 0 0 3px rgba(37,99,235,.25);
+
+
+}
+
+
+
+
+
+
+
+/* Notification */
+
+
+.icon-btn{
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    border:none;
+
+
+    border-radius:50%;
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+    );
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+    font-size:19px;
+
+
+    transition:.3s;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(37,99,235,.35);
+
+
+}
+
+
+
+
+
+.icon-btn:hover{
+
+
+    transform:
+
+    translateY(-3px)
+    scale(1.05);
+
+
+}
+
+
+
+
+
+/* ==========================
+   Profile
+========================== */
+
+
+.profile{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    padding:8px 15px;
+
+
+    border-radius:15px;
+
+
+    background:#f8fafc;
+
+
+}
+
+
+
+
+
+.avatar{
+
+
+    width:48px;
+
+
+    height:48px;
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #9333ea
+    );
+
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-weight:700;
+
+
+    font-size:18px;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(99,102,241,.35);
+
+
+}
+
+
+
+
+.profile strong{
+
+
+    color:#0f172a;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+.profile p{
+
+
+    color:#64748b;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+/* ==========================
+   Page Content
+========================== */
+
+
+.page-content{
+
+
+    padding:35px;
+
+
+    flex:1;
+
+
+    animation:
+
+    pageLoad .6s ease;
+
+
+}
+
+
+
+
+
+@keyframes pageLoad{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:translateY(20px);
+
+
+}
+
+
+
+to{
+
+
+opacity:1;
+
+
+transform:translateY(0);
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* ==========================
+   Responsive
+========================== */
+
+
+@media(max-width:768px){
+
+
+
+.main-content{
+
+
+    margin-left:80px;
+
+
+}
+
+
+
+.topbar{
+
+
+    padding:15px 20px;
+
+
+}
+
+
+
+.search-box{
+
+
+    display:none;
+
+
+}
+
+
+
+.profile p{
+
+
+    display:none;
+
+
+}
+
+
+
+.profile{
+
+
+    padding:5px;
+
+
+}
+
+
+
+.page-content{
+
+
+    padding:20px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:480px){
+
+
+
+.topbar-left h2{
+
+
+    font-size:20px;
+
+
+}
+
+
+
+.icon-btn{
+
+
+    width:38px;
+
+
+    height:38px;
+
+
+}
+
+
+
+.avatar{
+
+
+    width:38px;
+
+
+    height:38px;
+
+
+}
+
+
+}
